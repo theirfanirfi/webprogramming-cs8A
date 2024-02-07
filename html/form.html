@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form</title>
+</head>
+<body>
+
+	<h1>Form</h1>
+
+	<form>
+
+		<br/>
+		<br/>
+		<label for="profile_image">Profile Image</label>
+		<input type="file" name="profile_image" 
+		id="profile_image"required>
+
+		<label for="username">Username</label>
+		<input type="text" name="username" id="username" placeholder="Enter your username" required>
+
+		<br/>
+		<br/>
+		<label for="email">Email</label>
+		<input type="email" name="email" id="email" placeholder="Enter your Email" required>
+
+		<br/>
+		<br/>
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" placeholder="Enter your Password" required>
+
+
+		<br/>
+		<br/>
+		<label for="gender">Gender</label>
+		<input type="radio" name="gender" id="gender" value="male" required> Male
+
+		<input type="radio" name="gender" id="gender" value="female" required> Female
+		<br/>
+		<br/>
+		<label for="province">Province</label>
+		<select name="provinces" id="province">
+			<option value="kp">KP</option>
+			<option value="ict">ICT</option>
+			<option value="punjab">Punjab</option>
+			<option value="ajk">AJK</option>
+			<option value="sindh">Sindh</option>
+			<option value="balochistan">Balochistan</option>
+			<option value="gb">GB</option>
+		</select>
+
+		<br/>
+		<br/>
+
+		<label>Your Favorite days</label>
+		<br/>
+		<br/>
+		<input type="checkbox" name="days[]" value="Monday"> Monday <br/>
+		<input type="checkbox" name="days[]" value="Tuesday"> Tuesday <br/>
+		<input type="checkbox" name="days[]" value="Wednesday"> Wednesday <br/>
+		<input type="checkbox" name="days[]" value="Thursday"> Thursday <br/>
+		<input type="checkbox" name="days[]" value="Friday"> Friday <br/>
+		<input type="checkbox" name="days[]" value="Saturday"> Saturday <br/>
+		<input type="checkbox" name="days[]" value="Sunday"> Sunday
+		<br/>
+		<br/>
+		<button type="submit" name="submit"> Register</button>
+		<input type="submit" name="submit" value="Register input" />
+
+	</form>
+
+</body>
+</html>
