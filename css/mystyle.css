@@ -1,8 +1,14 @@
 * {
 		margin:6px;
+		text-align: center;
+		 font-family: "Homemade Apple", cursive;
 	}
 	h1, h3 {
 		text-align: center;
+		text-decoration:underline overline;
+		text-decoration-style: wavy;
+		text-transform: capitalize;
+		text-shadow: 2px 2px 4px red;
 
 	}
 header {
@@ -30,11 +36,7 @@ float:left;
 	width: 70%;
 	height: 600px;
 	background-size: cover;
-	background: url('../html/images/tehran.jpeg') no-repeat;
 	background-position: center center;
-	background-attachment: fixed;
-
-	color: white;
 	float: left;
 	opacity: 1.0;
 }
@@ -46,3 +48,39 @@ footer {
 	color: white;
 	clear: both;
 }
+
+
+p {
+	padding:8px;
+	border: 8px solid black;
+	text-align: justify;
+	text-align-last: left;
+	text-transform: capitalize;
+	text-indent: 50px;
+	letter-spacing: 2px;
+	line-height: 2.5;
+	word-spacing: 18px;
+	font-style: italic;
+
+}
+
+p.dotted {
+	outline: 20px red double;
+}
+
+.myiconstyle {
+	width: 60px;
+	height: 60px;
+	color:green;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: pink;
+}
+
+
+
+
+
+

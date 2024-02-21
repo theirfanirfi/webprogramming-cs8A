@@ -1,0 +1,116 @@
+@media screen and (min-width: 601px) {
+header {
+	width: 100%;
+	height: 150px;
+	background-color: green;
+}
+
+section {
+	width: 100%;
+}
+section sidebar {
+	width: 30%;
+	position: absolute;
+	left:2px;
+	border: 1px solid black;
+	height: 200px;
+	margin:8px;
+}
+
+section main {
+	width: 65%;
+	position: absolute;
+	right: 2px;
+	border: 1px solid black;
+	height: 200px;
+	margin:8px;	
+	overflow-x: scroll;
+
+
+}
+
+footer {
+
+	height: 120px;
+	width: 100%;
+	background-color: green;
+	position: absolute;
+	bottom: 2px;
+	margin-top:12px;
+}
+}
+
+@media screen and (max-width: 400px){
+	header {
+	width: 100%;
+	height: 150px;
+	background-color: green;
+}
+
+section sidebar {
+	display: none;
+}
+
+section main{
+	position: absolute;
+	width: 100%;
+	left: 2px;
+	margin:2px;
+	border: 2px solid black;
+}
+
+footer {
+	position: absolute;
+	bottom: 2px;
+	height: 100px;
+	width: 100%;
+}
+}
+
+@media screen and ((min-width: 401px) and (max-width: 600px)){
+	header {
+	width: 100%;
+	height: 150px;
+	background-color: black;
+}
+
+section sidebar {
+	position: absolute;
+	left: 2;
+	width: 30%;
+	height: 200px;
+	border:1px solid black;
+	}
+
+section main{
+	position: absolute;
+	width: 65%;
+	right: 2px;
+	margin:2px;
+	border: 2px solid black;
+}
+
+footer {
+	position: absolute;
+	bottom: 2px;
+	height: 100px;
+	width: 100%;
+	background-color: red;
+}
+}
+
+@media print {
+	* {
+		text-align: center;
+	}
+	main {
+		width: 100%;
+		text-align: center;
+		color: black;
+
+	}
+	header, sidebar, footer {
+		display: none;
+	}
+
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Table</title>
+	<style>
+		table {
+			width: 2000px;
+			height: 200px;
+			border-spacing: 6px;
+		}
+		table, tr, td, th {
+			border: 1px solid black;
+		}
+		td:nth-child(odd){
+			background-color: yellow;
+		}
+
+		tr:nth-child(4) {
+			background-color: blue;
+			color: white;
+		}
+
+		tr:hover {
+			background-color: black;
+			color: white;
+			text-align: right;
+			font-size: 20px;
+			width: 400px;
+			height: 40px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div style="height:100px;overflow-x: scroll;overflow-y: auto;">
+	<table>
+		<thead>
+			<th>#</th>
+			<th>RN</th>
+			<th>S.N</th>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>01</td>
+				<td>A</td>
+			</tr>
+
+						<tr>
+				<td>1</td>
+				<td>01</td>
+				<td>A</td>
+			</tr>
+
+						<tr>
+				<td>1</td>
+				<td>01</td>
+				<td>A</td>
+			</tr>
+						<tr>
+				<td>1</td>
+				<td>01</td>
+				<td>A</td>
+			</tr>
+						<tr>
+				<td>1</td>
+				<td>01</td>
+				<td>A</td>
+			</tr>
+						<tr>
+				<td>1</td>
+				<td>01</td>
+				<td>A</td>
+			</tr>
+						<tr>
+				<td>1</td>
+				<td>01</td>
+				<td>A</td>
+			</tr>
+
+		</tbody>
+	</table>
+
+</div>
+
+</body>
+</html>
