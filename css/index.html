@@ -32,7 +32,7 @@
 </sidebar>
 <main>
 	<h1> <i class="glyphicon glyphicon-cloud"></i> Main contents</h1>
-	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	<p id="main_paragraph"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -54,6 +54,119 @@
 
 </footer>
 
+<script type="text/javascript">
+	// var a = 1234;
+	// function display(s){
+	// 	console.log('name',this.name);
+	// }
 
+	// let student = {
+	// 	name: 'abc',
+	// 	age: 123,
+	// 	student_details: function (){
+	// 		console.log('student name is ',this.name, 'and her age is ',this.age);
+	// 	}
+	// }
+
+	// student.student_details();
+
+	// class Human {
+	// 	constructor(){
+	// 		this.hands = 2;
+	// 		this.legs = 2;
+	// 		this.can_speak = true;
+	// 		this.can_eat = "everything";
+	// 		this.can_move = true;
+	// 	}
+	// }
+
+	// class Person extends Human{
+	// 	constructor(){
+	// 		super();
+	// 		this.name = "abc";
+	// 		this.age = "";
+	// 		this.height = "";
+	// 		this.weight = "";
+	// 	}
+
+	// 	setPersonDetails(name, age, height, weight){
+	// 		this.name = name;
+	// 		this.age = age;
+	// 		this.height = height;
+	// 		this.weight = weight;
+	// 	}
+
+	// 	displayDetails(){
+	// 		console.log(this.name);
+	// 	}
+	// }
+
+	// let p = new Person();
+	// console.log("this");
+	// p.setPersonDetails("Mohsin", 18, 5.8, 80);
+
+	// p.displayDetails();
+
+	// sum = (a, b) => {
+	// 	return a +b;
+	// }
+
+	// console.log(sum(1,2));
+
+
+
+
+
+
+// getElementById
+
+var paragraph = document.getElementById("main_paragraph");
+paragraph.innerHTML = "this is dynamically changed paragraph text";
+console.log(paragraph.innerHTML)
+
+var main = document.getElementsByTagName("main")[0];
+
+let new_paragraph = document.createElement("h1");
+new_paragraph.setAttribute("id", "this_is_h1");
+
+new_paragraph.style.backgroundColor = "green";
+
+new_paragraph.innerHTML = "I am dynamically created H1 tag";
+
+main.appendChild(new_paragraph);
+
+let c = confirm("Do you want to change the text");
+if(c){
+	setTimeout(() => {
+	let e = prompt("Please enter some text");
+	new_paragraph.innerHTML = e;
+}, 2000);
+}else {
+	console.log("You chose to not change the text");
+}
+
+
+
+
+
+// console.log(main[0]);
+
+
+// getElementsByClassName
+// getELmeentsByTagName
+// setAttribute
+// getAttribute
+// createElement
+// appendChild
+// removeChild
+// replaceChild(new, old)
+
+
+
+
+
+
+
+</script>
 </body>
 </html>
