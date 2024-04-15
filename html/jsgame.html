@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Game</title>
+</head>
+<body>
+
+	<div id="area" style="width:1000px;height: 700px;border:2px solid black;margin:2px auto;">
+
+		<div id="firearea" style="width: 1000px;height: 100px;position: absolute;bottom: 110px;border:2px solid black;"></div>
+		<img id="craft" src="download.jpeg" style="width:100px;height:100px;position: absolute;bottom:18px;left:212px;">
+
+	</div>
+
+
+<script>
+	
+	var craft = document.getElementById("craft");
+	var div = document.getElementById("area");
+	var firediv = document.getElementById("firearea");
+	var left = 212;
+	var right = 0;
+
+
+
+	function moveObject(e){
+					console.log(e.key)
+
+		if(e.key == 'ArrowRight'){
+			if(left <=990){
+			left +=10;
+		}
+
+			craft.style.left = left+'px';
+		}else if(e.key == 'ArrowLeft'){
+
+		if(left >= 212){
+			left -=10;
+			craft.style.left = left+'px';
+		}
+
+		}else if(e.key == 'ArrowUp'){
+			let fire = document.createElement("img");
+			fire.setAttribute("src", "fire.png");
+			fire.style.width = "90px";
+			fire.style.height = "90px";
+			fire.style.position = "absolute";
+			fire.style.bottom = 120+'px';
+			console.log('left',left);
+			fire.style.left = left+'px';
+
+			let craftPosition = craft.getBoundingClientRect();
+			let firePosition = fire.getBoundingClientRect();
+
+
+			// fire.style.top = (craftPosition.top + 200)+'px';
+
+			div.insertBefore(fire,craft);
+			let top = craftPosition.top;
+			top = top-150;
+			console.log('top', top)
+			let fireInterval = setInterval(()=>{
+				console.log("working", top)
+
+				top -= 50;
+				fire.style.top = top+'px';
+				if(top < 0){
+					clearInterval(fireInterval);
+					div.removeChild(fire);
+				}
+			}, 1000)
+
+		}
+	}
+
+
+	document.addEventListener("keydown", moveObject);
+
+</script>
+</body>
+</html>
