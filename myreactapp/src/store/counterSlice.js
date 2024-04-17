@@ -19,10 +19,13 @@ const counterSlice = createSlice({
         incrementByValue: (state, value) => {
             console.log(value);
             state.counter += value.payload.myvalue
+        },
+        reset: (state) => {
+            state.counter = 0;
         }
-    }
+    },
 });
 
 export default counterSlice.reducer;
 
-export const {increment, decrement, evenIncrement, incrementByValue} = counterSlice.actions;
+export const {increment, decrement, evenIncrement, incrementByValue, reset} = counterSlice.actions;

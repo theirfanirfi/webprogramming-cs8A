@@ -3,18 +3,16 @@ import UserFormComponent from './UserFormComponent'
 import NavigationBar from'../NavigationBar';
 import {Link} from 'react-router-dom';
 import {MyTodo, YourTodo} from '../SingleTodo'
+import {useSelector, useDispatch} from 'react-redux';
+import { fetchTodos, load } from '../../store/todoSlice';
 
 function Home(){
-	const [todos, setTodos] = useState([]);
-	const [todo, setTodo] = useState({});
+	const dispatch = useDispatch();
+	const todostate = useSelector(state => state.todoSlice);
+	console.log(todostate);
 
 	useEffect(()=>{
-		fetch("https://jsonplaceholder.typicode.com/todos")
-		.then(res => res.json())
-		.then(res => {
-			console.log(res);
-			setTodos(res);
-		})
+		dispatch(fetchTodos());
 	},[])
 
 return (
@@ -23,15 +21,17 @@ return (
 <MyTodo />
 <h1>Todos</h1>
 
-<UserFormComponent todo={todo} />
+{/* <UserFormComponent todo={todo} /> */}
 
 <ul>
-{
-todos.map((el, index) => {
+
+{todostate.status == 'completed' &&
+todostate.todos.map((el, index) => {
 	return (
 
 	<li><a href={`/todo/${el.id}`}>{el.title}</a></li>
 
+	
 	)
 })	
 }

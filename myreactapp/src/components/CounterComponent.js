@@ -6,9 +6,14 @@ function CounterComponent(){
 	const dispatch = useDispatch();
 
 	const count = useSelector((state) => state.counterReducer.counter);
+
 	console.log(count);
 
 	let num = 2;
+
+	// useEffect(()=>{
+	// 	dispatch(fetchTodos(2));
+	// }, [dispatch])
 	// useEffect(()=>{
 	// 	console.log("component is loaded");
 	// 	if(evencounter < 1000){
@@ -33,7 +38,6 @@ function CounterComponent(){
 		<h1>This is CounterComponent</h1>
 		<p>this is paragraph</p>
 		<h2>My number is: {count}</h2>
-
 		<button onClick={() => dispatch(incrementByValue({myvalue: 4}))}>Increment</button>
 		</>
 		)
